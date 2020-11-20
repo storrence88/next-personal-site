@@ -1,5 +1,6 @@
 import React from 'react';
-import { Flex, useColorMode, IconButton } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { Flex, useColorMode, IconButton, Box, Button } from '@chakra-ui/react';
 import { FaSun } from 'react-icons/fa';
 import { FaMoon } from 'react-icons/fa';
 import styled from '@emotion/styled';
@@ -14,9 +15,18 @@ const StickyNavbar = styled(Flex)`
 
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
+
   const navBgColor = {
     light: 'rgba(255, 255, 255, 0.8)',
     dark: 'rgba(23, 25, 35, 0.8)'
+  };
+  const bgColor = {
+    light: 'white',
+    dark: 'gray.900'
+  };
+  const primarytextColor = {
+    light: 'black',
+    dark: 'white'
   };
 
   return (
@@ -34,12 +44,39 @@ const Container = ({ children }) => {
         mb={8}
         mx='auto'
       >
+        <Box>
+          <NextLink href='/' passHref>
+            <Button as='a' variant='ghost' p={[1, 4]}>
+              Home
+            </Button>
+          </NextLink>
+          <NextLink href='/about' passHref>
+            <Button as='a' variant='ghost' p={[1, 4]}>
+              About
+            </Button>
+          </NextLink>
+          <NextLink href='/blog' passHref>
+            <Button as='a' variant='ghost' p={[1, 4]}>
+              Blog
+            </Button>
+          </NextLink>
+        </Box>
         <IconButton
           aria-label='Toggle dark mode'
-          icon={colorMode === 'dark' ? <FaSun /> : <FaMoon />}
+          icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
           onClick={toggleColorMode}
         />
       </StickyNavbar>
+      <Flex
+        as='main'
+        justifyContent='center'
+        flexDirection='column'
+        bg={bgColor[colorMode]}
+        color={primarytextColor[colorMode]}
+        px={8}
+      >
+        {children}
+      </Flex>
     </>
   );
 };
