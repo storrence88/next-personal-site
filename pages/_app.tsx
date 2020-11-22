@@ -1,6 +1,6 @@
 import { ChakraProvider, useColorMode } from '@chakra-ui/react';
-import { Global, css } from '@emotion/react';
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
+import { Global, css } from '@emotion/react';
 import theme from '../styles/theme';
 
 const GlobalStyles = ({ children }) => {
@@ -13,7 +13,7 @@ const GlobalStyles = ({ children }) => {
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
           ::selection {
-            background-color: #47a3f3;
+            background-color: #ea2c62;
             color: #fefefe;
           }
 
@@ -26,7 +26,7 @@ const GlobalStyles = ({ children }) => {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === 'light' ? 'white' : '#171923'};
+            background: ${colorMode === 'light' ? 'white' : '#16213e'};
           }
         `}
       />
