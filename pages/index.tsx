@@ -1,11 +1,11 @@
 import { useColorMode, Stack, Flex, Heading, Text } from '@chakra-ui/react';
-import Container from '../components/container';
+import Container from '../components/Container';
 
 export default function Home() {
   const { colorMode } = useColorMode();
   const secondaryTextColor = {
     light: 'gray.700',
-    dark: 'gray.200'
+    dark: 'grey.300'
   };
   return (
     <Container>
