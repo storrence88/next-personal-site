@@ -3,6 +3,7 @@ import { FaSun } from 'react-icons/fa';
 import { FaMoon } from 'react-icons/fa';
 import NextLink from 'next/link';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
 const StickyNavbar = styled(Flex)`
   position: sticky;
@@ -14,14 +15,16 @@ const StickyNavbar = styled(Flex)`
 
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const MotionIcon = motion.custom(IconButton);
+  const MotionBox = motion.custom(Box);
 
   const navBgColor = {
     light: 'rgba(255, 255, 255, 0.8)',
-    dark: '#16213e'
+    dark: '#282c35'
   };
   const bgColor = {
     light: 'white',
-    dark: '#16213e'
+    dark: '#282c35'
   };
   const primarytextColor = {
     light: 'black',
@@ -48,37 +51,50 @@ const Container = ({ children }) => {
         p={8}
         mt={[0, 4]}
       >
-        <IconButton
+        <MotionIcon
           aria-label='Toggle dark mode'
           icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
           onClick={toggleColorMode}
+          whileHover={{ scale: 1.2 }}
         />
         <Box
           flexDirection={['row', 'column']}
           pt={[0, 4]}
           justifyContent={['space-evenly', 'flex-end']}
         >
-          <Box display={['inline', 'block']} pl={[1, 0]}>
+          <MotionBox
+            display={['inline', 'block']}
+            pl={[1, 0]}
+            whileHover={{ scale: 1.1 }}
+          >
             <NextLink href='/' passHref>
-              <Button as='a' variant='ghost' p={[1, 4]}>
+              <Button as='a' variant='ghost' p={[1, 2]} mb={[0, 2]}>
                 Home
               </Button>
             </NextLink>
-          </Box>
-          <Box display={['inline', 'block']} pl={[1, 0]}>
+          </MotionBox>
+          <MotionBox
+            display={['inline', 'block']}
+            pl={[1, 0]}
+            whileHover={{ scale: 1.1 }}
+          >
             <NextLink href='/about' passHref>
-              <Button as='a' variant='ghost' p={[1, 4]}>
+              <Button as='a' variant='ghost' p={[1, 2]} mb={[0, 2]}>
                 About
               </Button>
             </NextLink>
-          </Box>
-          <Box display={['inline', 'block']} pl={[1, 0]}>
+          </MotionBox>
+          <MotionBox
+            display={['inline', 'block']}
+            pl={[1, 0]}
+            whileHover={{ scale: 1.1 }}
+          >
             <NextLink href='/blog' passHref>
-              <Button as='a' variant='ghost' p={[1, 4]}>
+              <Button as='a' variant='ghost' p={[1, 2]} mb={[0, 2]}>
                 Blog
               </Button>
             </NextLink>
-          </Box>
+          </MotionBox>
         </Box>
       </StickyNavbar>
       <Flex

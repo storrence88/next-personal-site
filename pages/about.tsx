@@ -1,5 +1,5 @@
 import { useColorMode, Stack, Flex, Heading, Text } from '@chakra-ui/react';
-import Container from '../components/container';
+import Container from '../components/Container';
 
 const About = () => {
   const { colorMode } = useColorMode();
@@ -23,7 +23,7 @@ const About = () => {
             flexDirection='column'
             justifyContent='flex-start'
             alignItems='flex-start'
-            maxWidth='1200px'
+            maxW='1200px'
           >
             <Heading letterSpacing='tight' mb={6} as='h1' size='2xl'>
               My Story 📖

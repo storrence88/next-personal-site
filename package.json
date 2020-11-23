@@ -11,11 +11,14 @@
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
+    "date-fns": "^2.16.1",
     "framer-motion": "^2.9.4",
     "next": "10.0.2",
+    "next-mdx-enhanced": "^5.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^3.11.0"
+    "react-icons": "^3.11.0",
+    "reading-time": "^1.2.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.9",
