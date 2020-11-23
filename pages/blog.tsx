@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Container from '../components/Container';
+import BlogPost from '../components/BlogPost';
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 import {
   Input,
@@ -7,10 +8,12 @@ import {
   InputRightElement,
   Stack,
   Flex,
-  Heading
+  Heading,
+  Icon
 } from '@chakra-ui/react';
 
 const Blog = () => {
+  console.log(blogPosts);
   const [searchValue, setSearchValue] = useState('');
   const filteredBlogPosts = blogPosts
     .sort(

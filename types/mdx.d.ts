@@ -1,8 +1,16 @@
 interface FrontMatter {
-  title: string;
-  publishedAt: string;
-  summary: string;
-  image: string;
+  title?: string;
+  publishedAt?: string;
+  summary?: string;
+  image?: string;
+  wordCount?: number;
+  readingTime?: {
+    text: string;
+    minutes: decimal;
+    time: decimal;
+    words: number;
+  };
+  __resourcePath?: string;
 }
 
 declare module '*.mdx' {
