@@ -7,16 +7,14 @@ import {
   Text,
   Flex,
   Stack,
-  Avatar,
-  Link,
-  Box
+  Avatar
 } from '@chakra-ui/react';
 
 export default function BlogLayout({ children, frontMatter }) {
   const { colorMode } = useColorMode();
   const textColor = {
     light: 'gray.700',
-    dark: 'gray.400'
+    dark: 'gray.300'
   };
 
   return (
@@ -27,17 +25,17 @@ export default function BlogLayout({ children, frontMatter }) {
         justifyContent='center'
         alignItems='flex-start'
         m='0 auto 4rem auto'
-        maxWidth='700px'
+        maxWidth='1200px'
         w='100%'
       >
         <Flex
           flexDirection='column'
           justifyContent='flex-start'
           alignItems='flex-start'
-          maxWidth='700px'
+          maxWidth='1200px'
           w='100%'
         >
-          <Heading letterSpacing='tight' mb={2} as='h1' size='2xl'>
+          <Heading mb={2} as='h1' size='xl'>
             {frontMatter.title}
           </Heading>
           <Flex

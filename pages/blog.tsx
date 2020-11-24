@@ -33,20 +33,22 @@ const Blog = () => {
         alignItems='flex-start'
         m='0 auto 4rem auto'
         maxW='1200px'
+        w='100%'
       >
         <Flex
           flexDirection='column'
           justifyContent='flex-start'
           alignItems='flex-start'
           maxW='1200px'
+          w='50%'
         >
-          <Heading letterSpacing='tight' mb={6} as='h1' size='2xl'>
+          <Heading mb={6} as='h1' size='2xl'>
             My Thoughts 📝
           </Heading>
           <InputGroup my={4} mr={4} w='100%'>
             <Input
               aria-label='Search articles'
-              onChange={(e) => setSearchValue(e.target.value)}
+              onChange={(event) => setSearchValue(event.target.value)}
               placeholder='Search articles'
             />
             <InputRightElement>
@@ -61,9 +63,6 @@ const Blog = () => {
           maxWidth='700px'
           mt={8}
         >
-          <Heading letterSpacing='tight' mb={4} size='xl' fontWeight={700}>
-            All Posts
-          </Heading>
           {!filteredBlogPosts.length && 'No posts found.'}
           {filteredBlogPosts.map((frontMatter) => (
             <BlogPost key={frontMatter.title} {...frontMatter} />

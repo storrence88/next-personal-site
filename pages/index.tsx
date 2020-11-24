@@ -24,13 +24,12 @@ export default function Home() {
           maxW='1200px'
         >
           <Heading
-            letterSpacing='tight'
             mb={6}
             as='h1'
             size='2xl'
             color={secondaryTextColor[colorMode]}
           >
-            Hi, I'm Steve. 👋
+            Hi, I'm Steve 👋
           </Heading>
           <Text color={secondaryTextColor[colorMode]}>
             I'm a developer living just outside of the DFW metroplex. Welcome to
