@@ -109,11 +109,23 @@ const Container = ({ children }) => {
         w='100%'
         mx={[0, 'auto']}
       >
-        {children}
+        <motion.div
+          initial='pageInitial'
+          animate='pageAnimate'
+          variants={{
+            pageInitial: {
+              opacity: 0
+            },
+            pageAnimate: {
+              opacity: 1
+            }
+          }}
+        >
+          {children}
+        </motion.div>
       </Flex>
     </Box>
   );
 };
 
 export default Container;
-//

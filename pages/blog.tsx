@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Container from '../components/container';
 import BlogPost from '../components/BlogPost';
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
+import { motion } from 'framer-motion';
 import {
   Input,
   InputGroup,
@@ -15,6 +16,14 @@ import {
 const Blog = () => {
   console.log(blogPosts);
   const [searchValue, setSearchValue] = useState('');
+  const MotionFlex = motion.custom(Flex);
+  const stagger = {
+    animate: {
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
   const filteredBlogPosts = blogPosts
     .sort(
       (a, b) =>
@@ -56,18 +65,22 @@ const Blog = () => {
             </InputRightElement>
           </InputGroup>
         </Flex>
-        <Flex
+        <MotionFlex
           flexDirection='column'
           justifyContent='flex-start'
           alignItems='flex-start'
           maxWidth='700px'
           mt={8}
+          initial='initial'
+          animate='animate'
         >
           {!filteredBlogPosts.length && 'No posts found.'}
-          {filteredBlogPosts.map((frontMatter) => (
-            <BlogPost key={frontMatter.title} {...frontMatter} />
-          ))}
-        </Flex>
+          <motion.div variants={stagger}>
+            {filteredBlogPosts.map((frontMatter) => (
+              <BlogPost key={frontMatter.title} {...frontMatter} />
+            ))}
+          </motion.div>
+        </MotionFlex>
       </Stack>
     </Container>
   );
