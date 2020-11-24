@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Container from '../components/Container';
+import Container from '../components/container';
 import BlogPost from '../components/BlogPost';
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 import {

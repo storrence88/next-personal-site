@@ -1,5 +1,5 @@
 import { useColorMode, Stack, Flex, Heading, Text } from '@chakra-ui/react';
-import Container from '../components/Container';
+import Container from '../components/container';
 
 const About = () => {
   const { colorMode } = useColorMode();

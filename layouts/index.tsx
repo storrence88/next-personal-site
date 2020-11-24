@@ -1,6 +1,6 @@
 import React from 'react';
 import { parseISO, format } from 'date-fns';
-import Container from '../components/Container';
+import Container from '../components/container';
 import {
   useColorMode,
   Heading,
