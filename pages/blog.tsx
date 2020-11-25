@@ -20,7 +20,7 @@ const Blog = () => {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.15
+        staggerChildren: 0.18
       }
     }
   };
@@ -49,21 +49,11 @@ const Blog = () => {
           justifyContent='flex-start'
           alignItems='flex-start'
           maxW='1200px'
-          w='50%'
+          w='100%'
         >
           <Heading mb={6} as='h1' size='2xl'>
             My Thoughts 📝
           </Heading>
-          <InputGroup my={4} mr={4} w='100%'>
-            <Input
-              aria-label='Search articles'
-              onChange={(event) => setSearchValue(event.target.value)}
-              placeholder='Search articles'
-            />
-            <InputRightElement>
-              <Icon name='search' color='gray.300' />
-            </InputRightElement>
-          </InputGroup>
         </Flex>
         <MotionFlex
           flexDirection='column'
@@ -74,7 +64,7 @@ const Blog = () => {
           initial='initial'
           animate='animate'
         >
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {/* {!filteredBlogPosts.length && 'No posts found.'} */}
           <motion.div variants={stagger}>
             {filteredBlogPosts.map((frontMatter) => (
               <BlogPost key={frontMatter.title} {...frontMatter} />
