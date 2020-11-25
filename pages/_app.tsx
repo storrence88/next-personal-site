@@ -1,4 +1,6 @@
 import { ChakraProvider, useColorMode } from '@chakra-ui/react';
+import MDXComponents from '../components/MDXComponents';
+import { MDXProvider } from '@mdx-js/react';
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
 import { Global, css } from '@emotion/react';
 import theme from '../styles/theme';
@@ -38,9 +40,11 @@ const GlobalStyles = ({ children }) => {
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <GlobalStyles>
-        <Component {...pageProps} />
-      </GlobalStyles>
+      <MDXProvider components={MDXComponents}>
+        <GlobalStyles>
+          <Component {...pageProps} />
+        </GlobalStyles>
+      </MDXProvider>
     </ChakraProvider>
   );
 }
