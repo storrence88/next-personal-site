@@ -35,7 +35,7 @@ export default function BlogLayout({ children, frontMatter }) {
           maxWidth='1200px'
           w='100%'
         >
-          <Heading mb={2} as='h1' size='xl'>
+          <Heading mb={2} as='h1' size='xl' fontFamily='Raleway'>
             {frontMatter.title}
           </Heading>
           <Flex
@@ -53,13 +53,12 @@ export default function BlogLayout({ children, frontMatter }) {
                 src='/static/example.jpg'
                 mr={2}
               />
-              <Text fontSize='sm' color={textColor[colorMode]}>
-                {frontMatter.by}
+              <Text fontSize='md' color={textColor[colorMode]}>
                 {'Steven Torrence / '}
                 {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
               </Text>
             </Flex>
-            <Text fontSize='sm' color='gray.500' minWidth='100px' mt={[2, 0]}>
+            <Text fontSize='md' color='gray.500' minWidth='100px' mt={[2, 0]}>
               {frontMatter.readingTime.text}
             </Text>
           </Flex>

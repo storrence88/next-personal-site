@@ -1,4 +1,5 @@
 import { useColorMode, Heading, Text, Flex, Box, Link } from '@chakra-ui/react';
+import { parseISO, format } from 'date-fns';
 import NextLink from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -43,12 +44,15 @@ const BlogPost = (frontMatter) => {
                 flexDirection={['column', 'row']}
               >
                 <Heading
-                  size='md'
+                  size='lg'
                   as='h2'
                   mb={2}
                   fontWeight='bold'
-                  fontFamily="'Source Code Pro', Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'"
+                  fontFamily="Raleway,'Source Code Pro', Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'"
                 >
+                  <Text fontSize='md' color={secondaryTextColor[colorMode]}>
+                    {format(parseISO(frontMatter.publishedAt), 'MMM dd, yyyy')}
+                  </Text>
                   {title}
                 </Heading>
               </Flex>

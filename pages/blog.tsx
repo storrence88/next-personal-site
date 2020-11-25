@@ -20,7 +20,7 @@ const Blog = () => {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.18
+        staggerChildren: 0.12
       }
     }
   };
@@ -51,7 +51,7 @@ const Blog = () => {
           maxW='1200px'
           w='100%'
         >
-          <Heading mb={6} as='h1' size='2xl'>
+          <Heading mb={6} as='h1' size='2xl' fontFamily='Raleway'>
             My Thoughts 📝
           </Heading>
         </Flex>

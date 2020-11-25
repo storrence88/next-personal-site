@@ -25,7 +25,7 @@ const About = () => {
             alignItems='flex-start'
             maxW='1200px'
           >
-            <Heading mb={6} as='h1' size='2xl'>
+            <Heading mb={6} as='h1' size='2xl' fontFamily='Raleway'>
               My Story 📖
             </Heading>
             <Text color={secondaryTextColor[colorMode]} mb={4}>

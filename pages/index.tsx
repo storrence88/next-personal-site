@@ -28,6 +28,7 @@ export default function Home() {
             as='h1'
             size='2xl'
             color={secondaryTextColor[colorMode]}
+            fontFamily='Raleway'
           >
             Hi, I'm Steve 👋
           </Heading>
@@ -35,20 +36,6 @@ export default function Home() {
             I'm a developer living just outside of the DFW metroplex. Welcome to
             my personal site!
           </Text>
-        </Flex>
-        <Flex
-          flexDirection='column'
-          justifyContent='flex-start'
-          alignItems='flex-start'
-          maxWidth='700px'
-          mt={8}
-        >
-          <Heading letterSpacing='tight' mb={4} size='l' fontWeight={700}>
-            Recent Articles
-          </Heading>
-          <Text>Article 1</Text>
-          <Text>Article 2</Text>
-          <Text>Article 3</Text>
         </Flex>
       </Stack>
     </Container>
