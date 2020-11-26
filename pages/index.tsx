@@ -1,8 +1,21 @@
-import { useColorMode, Stack, Flex, Heading, Text } from '@chakra-ui/react';
+import {
+  useColorMode,
+  Stack,
+  Flex,
+  Heading,
+  Text,
+  Link,
+  Image,
+  Box
+} from '@chakra-ui/react';
 import Container from '../components/container';
 
 export default function Home() {
   const { colorMode } = useColorMode();
+  const linkColor = {
+    light: 'hsl(208, 99%, 44%)',
+    dark: 'hsl(208, 95%, 68%)'
+  };
   const secondaryTextColor = {
     light: 'gray.700',
     dark: 'grey.300'
@@ -24,18 +37,68 @@ export default function Home() {
           maxW='1200px'
         >
           <Heading
+            ml={['auto', 0]}
+            mr={['auto', 0]}
             mb={6}
             as='h1'
             size='2xl'
             color={secondaryTextColor[colorMode]}
             fontFamily='Raleway'
           >
-            Hi, I'm Steve 👋
+            Hi. I'm Steve 👋
           </Heading>
-          <Text color={secondaryTextColor[colorMode]}>
-            I'm a developer living just outside of the DFW metroplex. Welcome to
-            my personal site!
-          </Text>
+          <Flex
+            direction={['column', 'row']}
+            justifyContent='space-between'
+            alignItems='center'
+          >
+            <Image
+              src='/static/images/profile.jpg'
+              boxSize='255px'
+              borderRadius='full'
+              objectFit='cover'
+              alt='Steve Torrence'
+              mb='8'
+            />
+            <Box ml={[0, '6']} pb={[0, '8']}>
+              <Text color={secondaryTextColor[colorMode]} mb={4}>
+                I'm a software developer living in the DFW metroplex. I love
+                eating food, watching cheesy horror movies, and hanging out with
+                my wife and our two dogs.
+              </Text>
+              <Text color={secondaryTextColor[colorMode]} mb={4}>
+                I'm a firm believer that software development is more about
+                people than code.
+              </Text>
+              <Text color={secondaryTextColor[colorMode]}>
+                I’m always eager to connect — find me on{' '}
+                <Link
+                  href='https://github.com/storrence88'
+                  color={linkColor[colorMode]}
+                  _hover={{
+                    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.05)',
+                    textDecoration: 'none'
+                  }}
+                  isExternal
+                >
+                  Github
+                </Link>{' '}
+                or{' '}
+                <Link
+                  href='https://twitter.com/storrence_88'
+                  color={linkColor[colorMode]}
+                  _hover={{
+                    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.05)',
+                    textDecoration: 'none'
+                  }}
+                  isExternal
+                >
+                  Twitter
+                </Link>
+                !
+              </Text>
+            </Box>
+          </Flex>
         </Flex>
       </Stack>
     </Container>

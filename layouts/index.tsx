@@ -50,7 +50,7 @@ export default function BlogLayout({ children, frontMatter }) {
               <Avatar
                 size='md'
                 name='Steven Torrence'
-                src='/static/example.jpg'
+                src='/static/images/profile-thumbnail.jpg'
                 mr={2}
               />
               <Text fontSize='md' color={textColor[colorMode]}>
