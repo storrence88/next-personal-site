@@ -1,4 +1,11 @@
-import { Flex, useColorMode, IconButton, Box, Button } from '@chakra-ui/react';
+import {
+  Flex,
+  useColorMode,
+  IconButton,
+  Box,
+  Button,
+  chakra
+} from '@chakra-ui/react';
 import { FaSun } from 'react-icons/fa';
 import { FaMoon } from 'react-icons/fa';
 import NextLink from 'next/link';
@@ -16,7 +23,7 @@ const StickyNavbar = styled(Flex)`
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const MotionIcon = motion.custom(IconButton);
-  const MotionBox = motion.custom(Box);
+  const MotionBox = chakra(motion.div);
 
   const navBgColor = {
     light: 'rgba(255, 255, 255, 0.8)',
@@ -51,12 +58,13 @@ const Container = ({ children }) => {
         p={8}
         mt={[0, 4]}
       >
-        <MotionIcon
-          aria-label='Toggle dark mode'
-          icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
-          onClick={toggleColorMode}
-          whileHover={{ scale: 1.2 }}
-        />
+        <MotionBox whileHover={{ scale: 1.2 }}>
+          <MotionIcon
+            aria-label='Toggle dark mode'
+            icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
+            onClick={toggleColorMode}
+          />
+        </MotionBox>
         <Box
           flexDirection={['row', 'column']}
           pt={[0, 4]}

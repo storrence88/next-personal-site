@@ -1,4 +1,12 @@
-import { useColorMode, Heading, Text, Flex, Box, Link } from '@chakra-ui/react';
+import {
+  useColorMode,
+  Heading,
+  Text,
+  Flex,
+  Box,
+  Link,
+  chakra
+} from '@chakra-ui/react';
 import { parseISO, format } from 'date-fns';
 import NextLink from 'next/link';
 import { motion } from 'framer-motion';
@@ -10,7 +18,8 @@ const BlogPost = (frontMatter) => {
     light: 'gray.700',
     dark: 'gray.300'
   };
-  const MotionBox = motion.custom(Box);
+  // const MotionBox = motion.custom(Box);
+  const MotionBox = chakra(motion.div);
   const slug = frontMatter.__resourcePath
     .replace('blog/', '')
     .replace('.mdx', '');

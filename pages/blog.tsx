@@ -14,7 +14,6 @@ import {
 } from '@chakra-ui/react';
 
 const Blog = () => {
-  console.log(blogPosts);
   const [searchValue, setSearchValue] = useState('');
   const MotionFlex = motion.custom(Flex);
   const stagger = {
