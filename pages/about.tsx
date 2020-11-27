@@ -29,33 +29,45 @@ const About = () => {
               My Story 📖
             </Heading>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Hey, I’m Steve Torrence. I'm a developer, musician, and educator
-              and I currently work at Cratebind in Dallas as a backend
-              developer.
+              Hey, I’m Steve Torrence. I'm a software developer, musician, and
+              educator. I currently work at CrateBind, a consulting agency in
+              Dallas that specializes in creating custom software, mobile apps
+              and websites for our clients.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              I grew up in Houston, Texas and was a HUGE band nerd in high
-              school. Of course, I played the best instrument, the bass
-              trombone. I followed my passion for music into college where I
-              attended Sam Houston State University and pursued Music Education.
+              Originally from Houston, music played a significant role in my
+              life growing up. I was a HUGE band nerd in high school. 🤓 Of
+              course, I played the best instrument, the bass trombone! After
+              graduating from high school, I wanted to give back and share my
+              passion for music with others. I attended Sam Houston State
+              University and pursued a degree in Music Education.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               Immediately after graduating, I packed up and moved to Dallas for
-              my first teaching gig! After spending 7 years teaching at the
-              highschool and middle school level, I decided it was time to
-              pursue my other great passion: Technology!
+              my first teaching gig! I spent the next 7 incredible years
+              teaching at the high school and middle school level. During that
+              time, I had the opportunity to meet and study with many fantastic
+              musicians and educators while teaching hundreds of students. I
+              learned so during my time as a teacher but due to the changing
+              climate of the education system, I felt it was time for a change.
+              I decided it was time to pursue my other great passion:
+              Technology!
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Immediately after leaving the education field, I attended the
-              Coding Dojo Bootcamp. There I was introduced to wonderful world of
-              Javascript, Python, and Ruby!
+              Immediately after leaving teaching, I attended the Coding Dojo
+              Bootcamp in Dallas. There I was introduced to the wonderful world
+              of Javascript, Python, and Ruby!
             </Text>
             <Text Text color={secondaryTextColor[colorMode]} mb={4}>
-              After completion of the bootcamp, I was brought on as a backend
-              developer at a consulting agency, Cratebind. During my first two
-              years working there I had the opportunity to work with and learn
-              from amazingly smart people while picking up many new strategies
-              and technologies along the way.
+              Soon after the bootcamp, I was hired as a developer at CrateBind.
+              My first two years, I had the opportunity to work with and learn
+              from some really smart and amazing people!
+            </Text>
+            <Text Text color={secondaryTextColor[colorMode]} mb={4}>
+              I'm soon coming up on my third year as a developer and I'm finding
+              there's still so much to discover! I'm hoping to use my blog as a
+              means of organizing my thoughts and sharing any bits of wisdom I
+              discover along the way!
             </Text>
           </Flex>
         </Stack>
