@@ -1,8 +1,11 @@
 import { useColorMode, Stack, Flex, Heading, Text } from '@chakra-ui/react';
 import Container from '../components/container';
+import { NextSeo } from 'next-seo';
 
 const About = () => {
   const { colorMode } = useColorMode();
+  const url = 'https://steventorrence.com/about';
+  const title = 'About Me – Steven Torrence';
   const secondaryTextColor = {
     light: 'gray.700',
     dark: 'gray.300'
@@ -10,6 +13,14 @@ const About = () => {
 
   return (
     <>
+      <NextSeo
+        title={title}
+        canonical={url}
+        openGraph={{
+          url,
+          title
+        }}
+      />
       <Container>
         <Stack
           as='main'
