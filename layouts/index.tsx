@@ -1,6 +1,7 @@
 import React from 'react';
 import { parseISO, format } from 'date-fns';
 import Container from '../components/container';
+import BlogSeo from '../components/BlogSeo';
 import {
   useColorMode,
   Heading,
@@ -12,6 +13,9 @@ import {
 
 export default function BlogLayout({ children, frontMatter }) {
   const { colorMode } = useColorMode();
+  const slug = frontMatter.__resourcePath
+    .replace('blog/', '')
+    .replace('.mdx', '');
   const textColor = {
     light: 'gray.700',
     dark: 'gray.300'
@@ -19,6 +23,10 @@ export default function BlogLayout({ children, frontMatter }) {
 
   return (
     <Container>
+      <BlogSeo
+        url={`https://steventorrence.com/blog/${slug}`}
+        {...frontMatter}
+      />
       <Stack
         as='article'
         spacing={8}

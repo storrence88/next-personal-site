@@ -3,6 +3,8 @@ import MDXComponents from '../components/MDXComponents';
 import { MDXProvider } from '@mdx-js/react';
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
 import { Global, css } from '@emotion/react';
+import { DefaultSeo } from 'next-seo';
+import SEO from '../next-seo.config';
 import theme from '../styles/theme';
 
 const GlobalStyles = ({ children }) => {
@@ -42,6 +44,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
         <GlobalStyles>
+          <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </GlobalStyles>
       </MDXProvider>

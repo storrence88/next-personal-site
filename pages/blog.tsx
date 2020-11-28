@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Container from '../components/container';
 import BlogPost from '../components/BlogPost';
+import { NextSeo } from 'next-seo';
 import { frontMatter as blogPosts } from './blog/**/*.mdx';
 import { motion } from 'framer-motion';
 import {
@@ -15,6 +16,9 @@ import {
 
 const Blog = () => {
   const [searchValue, setSearchValue] = useState('');
+  const url = 'https://steventorrence.com/blog';
+  const title = 'Blog – Steven Torrence';
+  const description = 'Thoughts of a Ruby/Javascript developer';
   const MotionFlex = motion.custom(Flex);
   const stagger = {
     animate: {
@@ -34,6 +38,16 @@ const Blog = () => {
 
   return (
     <Container>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+          description
+        }}
+      />
       <Stack
         as='main'
         spacing={8}
