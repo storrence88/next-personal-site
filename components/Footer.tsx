@@ -14,7 +14,12 @@ const Footer = () => {
   const MotionBox = chakra(motion.div);
 
   return (
-    <Flex align='center' pb={4} direction='column' background='#282c35'>
+    <Flex
+      align='center'
+      pb={4}
+      direction='column'
+      background={colorMode === 'light' ? 'white' : '#282c35'}
+    >
       {/* <NowPlaying /> */}
       <Flex direction='row'>
         <MotionBox whileHover={{ scale: 1.2 }} pl={2} pr={2}>

@@ -41,6 +41,8 @@ const GlobalStyles = ({ children }) => {
 };
 
 function MyApp({ Component, pageProps }) {
+  const { colorMode } = useColorMode();
+
   return (
     <ChakraProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
@@ -50,7 +52,7 @@ function MyApp({ Component, pageProps }) {
             direction='column'
             justifyContent='space-between'
             h='100vh'
-            background='#282c35'
+            background={colorMode === 'dark' ? '#282c35' : null}
           >
             <Component {...pageProps} />
             <Footer />
