@@ -1,4 +1,4 @@
-import { ChakraProvider, useColorMode } from '@chakra-ui/react';
+import { ChakraProvider, useColorMode, Flex } from '@chakra-ui/react';
 import MDXComponents from '../components/MDXComponents';
 import { MDXProvider } from '@mdx-js/react';
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
@@ -6,6 +6,7 @@ import { Global, css } from '@emotion/react';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import theme from '../styles/theme';
+import Footer from '../components/Footer';
 
 const GlobalStyles = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -45,7 +46,15 @@ function MyApp({ Component, pageProps }) {
       <MDXProvider components={MDXComponents}>
         <GlobalStyles>
           <DefaultSeo {...SEO} />
-          <Component {...pageProps} />
+          <Flex
+            direction='column'
+            justifyContent='space-between'
+            h='100vh'
+            background='#282c35'
+          >
+            <Component {...pageProps} />
+            <Footer />
+          </Flex>
         </GlobalStyles>
       </MDXProvider>
     </ChakraProvider>

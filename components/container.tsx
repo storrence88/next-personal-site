@@ -6,10 +6,10 @@ import {
   Button,
   chakra
 } from '@chakra-ui/react';
-import { FaSun } from 'react-icons/fa';
-import { FaMoon } from 'react-icons/fa';
 import NextLink from 'next/link';
 import styled from '@emotion/styled';
+import { FaSun } from 'react-icons/fa';
+import { FaMoon } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const StickyNavbar = styled(Flex)`
