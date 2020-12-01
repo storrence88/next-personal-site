@@ -19,6 +19,11 @@ const Footer = () => {
       pb={4}
       direction='column'
       background={colorMode === 'light' ? 'white' : '#282c35'}
+      position='absolute'
+      left={0}
+      bottom={0}
+      right={0}
+      height='95px'
     >
       {/* <NowPlaying /> */}
       <Flex direction='row'>

@@ -48,15 +48,10 @@ function MyApp({ Component, pageProps }) {
       <MDXProvider components={MDXComponents}>
         <GlobalStyles>
           <DefaultSeo {...SEO} />
-          {/* <Flex
-            direction='column'
-            justifyContent='space-between'
-            h='100vh'
-            background={colorMode === 'dark' ? '#282c35' : null}
-          > */}
-          <Component {...pageProps} />
-          {/* <Footer /> */}
-          {/* </Flex> */}
+          <div style={{ paddingBottom: '75px' }}>
+            <Component {...pageProps} />
+            <Footer />
+          </div>
         </GlobalStyles>
       </MDXProvider>
     </ChakraProvider>
