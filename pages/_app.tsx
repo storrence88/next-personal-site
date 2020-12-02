@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
       <MDXProvider components={MDXComponents}>
         <GlobalStyles>
           <DefaultSeo {...SEO} />
-          <div style={{ paddingBottom: '75px' }}>
+          <div style={{ paddingBottom: '154px' }}>
             <Component {...pageProps} />
             <Footer />
           </div>

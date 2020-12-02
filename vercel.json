@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "env": {},
+  "redirects": [],
+  "headers": [
+    {
+      "source": "/api/now-playing",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, stale-while-revalidate=30"
+        }
+      ]
+    },
+    {
+      "source": "/api/top-tracks",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=43200"
+        }
+      ]
+    }
+  ]
+}
