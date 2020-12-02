@@ -6,6 +6,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import { FaMailBulk } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import NowPlaying from '../components/NowPlaying';
 
 // import NowPlaying from './NowPlaying';
 
@@ -23,9 +24,9 @@ const Footer = () => {
       left={0}
       bottom={0}
       right={0}
-      height='95px'
+      height='190px'
     >
-      {/* <NowPlaying /> */}
+      <NowPlaying />
       <Flex direction='row'>
         <MotionBox whileHover={{ scale: 1.2 }} pl={2} pr={2}>
           <Link
