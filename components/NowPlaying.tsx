@@ -20,7 +20,7 @@ const NowPlaying = () => {
     light: 'gray.200',
     dark: 'gray.700'
   };
-  console.log(data);
+
   return (
     <Box
       mb={4}
