@@ -104,7 +104,7 @@ const DocsHeading = (props) => (
       },
       '&[id]:before': {
         display: 'block',
-        height: ' 6rem',
+        height: '6rem',
         marginTop: '-6rem',
         visibility: 'hidden',
         content: `""`
@@ -112,8 +112,8 @@ const DocsHeading = (props) => (
       '&[id]:hover a': { opacity: 1 }
     }}
     {...props}
-    mb='1em'
-    mt='2em'
+    // mb='1em'
+    // mt='2em'
   >
     <Box pointerEvents='auto'>
       {props.children}
