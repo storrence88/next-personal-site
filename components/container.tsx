@@ -43,7 +43,7 @@ const Container = ({ children }) => {
       d='flex'
       flexDirection={['column', 'row']}
       justifyContent='center'
-      maxW='1200px'
+      maxW='1000px'
       w='100%'
       mx='auto'
     >

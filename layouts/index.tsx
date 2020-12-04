@@ -32,16 +32,17 @@ export default function BlogLayout({ children, frontMatter }) {
         spacing={8}
         justifyContent='center'
         alignItems='flex-start'
-        m='0 auto 4rem auto'
-        maxWidth='1200px'
+        m='0 auto 8rem auto'
+        maxWidth='1000px'
         w='100%'
       >
         <Flex
           flexDirection='column'
           justifyContent='flex-start'
           alignItems='flex-start'
-          maxWidth='1200px'
+          maxWidth='1000px'
           w='100%'
+          mb={2}
         >
           <Heading mb={2} as='h1' size='xl' fontFamily='Raleway'>
             {frontMatter.title}
