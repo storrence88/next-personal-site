@@ -46,27 +46,27 @@ const About = () => {
               software, mobile apps and websites.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
-              Music played a significant role in my life growing up. I attended
-              Sam Houston State University and pursued a degree in Music
-              Education.
+              Music played a significant role in my life growing up. After
+              graduating from high school, I attended Sam Houston State
+              University and pursued a degree in Music Education.
             </Text>
             <Text color={secondaryTextColor[colorMode]} mb={4}>
               After 7 incredible years teaching at the high school and middle
               school level, I felt it was time for a change. I decided it was
               time to pursue my other great passion: Technology! In 2018, I
-              attended the Coding Dojo Bootcamp in Dallas. There I was
+              attended the Coding Dojo Bootcamp in Dallas. It was there I was
               introduced to the wonderful world of Javascript, Python, and Ruby!
             </Text>
             <Text Text color={secondaryTextColor[colorMode]} mb={4}>
               Soon after the bootcamp, I was hired as a developer at CrateBind.
-              My first two years, I had the opportunity to learn and work with
-              some incredibly smart people.
+              I spent my first two years working closely with other developers
+              absorbing as much information as possible!
             </Text>
             <Text Text color={secondaryTextColor[colorMode]} mb={4}>
-              I'm soon coming up on my third year as a developer and I'm finding
-              there's still so much to discover. I'm hoping to use my blog as a
-              means of organizing my thoughts and sharing any bits of wisdom I
-              discover along the way!
+              Fast forward to 2020 and I'm coming up on my third year as a
+              developer. I'm finding there's still so much to discover and I'm
+              hoping to use my blog as a means of organizing my thoughts and
+              sharing any bits of wisdom I discover along the way!
             </Text>
           </Flex>
         </Stack>
